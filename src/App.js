@@ -4,6 +4,7 @@ import './App.css';
 import Normal from './screens/Normal'
 import Break from './screens/break'
 import Light from './screens/light'
+import Toggle from './screens/Toggle_button'
 import './bootstrap.css'
 
 class App extends Component {
@@ -45,14 +46,12 @@ class App extends Component {
 
     return (
       <div className="App">
-     {normall && <Normal/>}
-     {breakk && <Break/>}
-     {lightt && <Light/>}
+     {normall && <Normal />}
+     {breakk && <Break />}
+     {lightt && <Light />}
 
 
-<button onClick={this.on} className="btn btn-success" >Switch On </button>
-<button onClick={this.off} className="btn btn-default"> Switch Off</button>
-<button onClick={this.break} className="btn btn-success">Break</button>
+{<Toggle on={this.on} off={this.off} break={this.break}/>}
 
       </div>
 
